@@ -13,6 +13,7 @@ namespace Pract
         static void Main(string[] args)
         {
             Array.Copy(nums1, 0, nums2, 0, 5);
+            Array.Reverse(nums2);
             if (nums1.Length == nums2.Length)
             {
                 for (int i = 0; i < nums1.Length; )
@@ -24,8 +25,18 @@ namespace Pract
                         {
                             Console.WriteLine("==");
                         }
+                        
+                    }
+                    else
+                    {
+                        Console.WriteLine("Error");
+                        break;
                     }
                 }
+            }
+            else
+            {
+                Console.WriteLine("Error");
             }
             
             Console.ReadLine();
