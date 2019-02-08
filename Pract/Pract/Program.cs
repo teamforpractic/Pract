@@ -8,48 +8,21 @@ using System.Threading.Tasks;
 
 namespace Pract
 {
-    class Program:Mas
+    class Program
     {
+        static int[] nums1 = { 1, 2, 3, 2, 1 };
         static void Main(string[] args)
         {
-            Array.Copy(nums1, 0, nums2, 0, 5);
-            Array.Reverse(nums2);
-            if (nums1.Length == nums2.Length)
+            for (var i = 0;nums1[i]==nums1[nums1.Length-i-1]; i++)
             {
-                for (int i = 0; i < nums1.Length; )
+                if (i == nums1.Length-1)
                 {
-                    if (nums1[i] == nums2[i])
-                    {
-                        i++;
-                        if (i == 5)
-                        {
-                            Console.WriteLine("==");
-                        }
-                        
-                    }
-                    else
-                    {
-                        Console.WriteLine("Error");
-                        break;
-                    }
+                    Console.WriteLine("==");
+                    break;
                 }
             }
-            else
-            {
-                Console.WriteLine("Error");
-            }
-            
             Console.ReadLine();
         }
-
-    }
-
-    class Mas
-    {
-        protected static int[] nums1 = {1, 2, 3, 2, 1};
-        protected static int[] nums2 = new int[5];
-
-
     }
 }    
 
